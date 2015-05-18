@@ -22,7 +22,7 @@ Song::Song(const std::map<std::string,std::string>& properties) :
 	id = properties.at("Persistent ID");
 	rating = std::min(getUInt(properties, "Rating") / 20, 5U);
 	bitRate = getUInt(properties, "Bit Rate");
-	hasVideo = properties.find("Has Video") == properties.end();
+	hasVideo = properties.find("Has Video") != properties.end();
 
 	auto locationIt = properties.find("Location");
 	if (locationIt != properties.end()) {
