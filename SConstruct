@@ -36,7 +36,7 @@ env["BOOST_DIR"] = "/usr/local/homebrew/opt/boost"
 env.Append(CPPDEFINES = ["BOOST_LOG_DYN_LINK", "BOOST_LOG_NO_THREADS"])
 env.Append(CPPPATH = ["${BOOST_DIR}/include"])
 env.Append(LIBPATH = ["${BOOST_DIR}/lib"])
-env.Append(LIBS = ["boost_filesystem", "boost_system", "boost_log", "pthread"])
+env.Append(LIBS = ["boost_program_options", "boost_filesystem", "boost_system", "boost_log", "pthread"])
 
 # TagLib
 env.ParseConfig('taglib-config --cflags --libs')
