@@ -52,3 +52,4 @@ lib = env.StaticLibrary("src/rits", [
 
 env.Program("bin/itunes-shrink", [ "src/itunes-shrink.cpp", lib ])
 env.Program("bin/itunes-foster", [ "src/itunes-foster.cpp", lib ])
+env.Program("bin/itunes-parse", [ "src/itunes-parse.cpp", lib ])

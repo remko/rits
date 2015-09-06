@@ -139,8 +139,8 @@ boost::filesystem::path getLibraryPath() {
 	return *library;
 }
 
-Library parseLibrary() {
-	auto db = getLibraryPath();
+Library parseLibrary(const boost::optional<std::string>& userDB) {
+	auto db = userDB ? boost::filesystem::path(*userDB) : getLibraryPath();
 	Parser parser;
 	xmlInitParser();
 	xmlSAXHandler handler;
